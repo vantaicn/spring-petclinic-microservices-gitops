@@ -1,0 +1,58 @@
+services:
+  config-server:
+    containerName: config-server
+    image: springcommunity/spring-petclinic-config-server
+    tag: latest
+    port: 8888
+    replicaCount: 1
+
+  discovery-server:
+    containerName: discovery-server
+    image: springcommunity/spring-petclinic-discovery-server
+    tag: latest
+    port: 8761
+    replicaCount: 1
+
+  customers-service:
+    containerName: customers-service
+    image: springcommunity/spring-petclinic-customers-service
+    tag: latest
+    port: 8081
+    replicaCount: 1
+
+  visits-service:
+    containerName: visits-service
+    image: springcommunity/spring-petclinic-visits-service
+    tag: latest
+    port: 8082
+    replicaCount: 1
+
+  vets-service:
+    containerName: vets-service
+    image: springcommunity/spring-petclinic-vets-service
+    tag: latest
+    port: 8083
+    replicaCount: 1
+
+  api-gateway:
+    containerName: api-gateway
+    image: springcommunity/spring-petclinic-api-gateway
+    tag: latest
+    port: 8080
+    replicaCount: 1
+
+  admin-server:
+    containerName: admin-server
+    image: springcommunity/spring-petclinic-admin-server
+    tag: latest
+    port: 9090
+    replicaCount: 1
+
+ingress:
+  enabled: false
+  host: spring-petclinic
+  paths:
+    - path: /gateway
+      service: api-gateway
+    - path: /admin
+      service: admin-server

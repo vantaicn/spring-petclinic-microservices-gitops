@@ -1,0 +1,31 @@
+{{- range $name, $config := .Values.services }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $config.containerName }}
+spec:
+  replicas: {{ default 1 $config.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ $config.containerName }}
+  template:
+    metadata:
+      labels:
+        app: {{ $config.containerName }}
+    spec:
+      containers:
+        - name: {{ $config.containerName }}
+          image: {{ $config.image }}:{{ $config.tag }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: {{ $config.port }}
+          env:
+            - name: CONFIG_SERVER_URL
+              value: http://config-server:8888
+            - name: EUREKA_INSTANCE_HOSTNAME
+              value: {{ $config.containerName }}
+          resources:
+            limits:
+              memory: "512Mi"
+---
+{{- end }}
