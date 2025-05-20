@@ -22,7 +22,7 @@ services:
 
   visits-service:
     containerName: visits-service
-    image: springcommunity/spring-petclinic-visits-service
+    image: vantaicn/spring-petclinic-visits-service
     tag: latest
     port: 8082
     replicaCount: 1
@@ -36,7 +36,7 @@ services:
 
   api-gateway:
     containerName: api-gateway
-    image: springcommunity/spring-petclinic-api-gateway
+    image: vantaicn/spring-petclinic-api-gateway
     tag: latest
     port: 8080
     replicaCount: 1
