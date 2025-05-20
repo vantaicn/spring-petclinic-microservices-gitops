@@ -17,7 +17,7 @@ services:
     containerName: customers-service
     image: springcommunity/spring-petclinic-customers-service
     tag: latest
-    port: 8081
+    port: 8084
     replicaCount: 1
 
   visits-service:
