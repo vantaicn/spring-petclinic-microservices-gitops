@@ -1,2 +1,6 @@
 ingress:
   host: dev.spring-petclinic
+
+services:
+  customers-service:
+    port: 8084
