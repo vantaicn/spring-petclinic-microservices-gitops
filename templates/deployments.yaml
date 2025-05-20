@@ -26,6 +26,6 @@ spec:
               value: {{ $config.containerName }}
           resources:
             limits:
-              memory: "512Mi"
+              memory: "256Mi"
 ---
 {{- end }}

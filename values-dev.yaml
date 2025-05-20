@@ -3,4 +3,4 @@ ingress:
 
 services:
   customers-service:
-    port: 8084
+    port: 8085
