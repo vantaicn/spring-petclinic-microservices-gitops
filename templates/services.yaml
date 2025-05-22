@@ -1,21 +1,3 @@
-{% comment %} {{- range $name, $config := .Values.services }}
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ $config.containerName }}
-spec:
-  type: {{ if or (eq $config.containerName "api-gateway") (eq $config.containerName "admin-server") }}NodePort{{ else }}ClusterIP{{ end }}
-  selector:
-    app: {{ $config.containerName }}
-  ports:
-    - port: {{ $config.port }}
-      targetPort: {{ $config.port }}
-      {{- if or (eq $config.containerName "api-gateway") (eq $config.containerName "admin-server") }}
-      nodePort: {{ if eq $config.containerName "api-gateway" }}30080{{ else }}30090{{ end }}
-      {{- end }}
----
-{{- end }} {% endcomment %}
-
 {{- range $name, $config := .Values.services }}
 apiVersion: v1
 kind: Service
