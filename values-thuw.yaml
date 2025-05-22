@@ -1,0 +1,3 @@
+ingress:
+  host: thuw.spring-petclinic
+  namespace: thuw
