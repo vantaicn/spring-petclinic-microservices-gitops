@@ -5,6 +5,8 @@ services:
   api-gateway:
     tag: 049934e
   vets-service:
-    tag: 049934e
+    tag: 7a19620
   visits-service:
     tag: 049934e
+  discovery-server:
+    tag: 7a19620
