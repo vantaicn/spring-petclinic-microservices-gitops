@@ -7,6 +7,6 @@ services:
   vets-service:
     tag: 7a19620
   visits-service:
-    tag: 049934e
+    tag: 8cadbb2
   discovery-server:
     tag: 7a19620
