@@ -1,3 +1,12 @@
 ingress:
   host: thuw.spring-petclinic
   namespace: thuw
+services:
+  customers-service:
+    tag: latest
+  vets-service:
+    tag: latest
+  visits-service:
+    tag: latest
+  api-gateway:
+    tag: latest
