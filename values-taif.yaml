@@ -1,3 +1,12 @@
 ingress:
   host: taif.spring-petclinic
   namespace: taif
+services:
+  customers-service:
+    tag: latest
+  vets-service:
+    tag: latest
+  visits-service:
+    tag: 63bd92d
+  api-gateway:
+    tag: latest
