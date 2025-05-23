@@ -4,3 +4,9 @@ ingress:
 services:
   spring-petclinic-visits-service:
     tag: 68b81b8
+  api-gateway:
+    tag: 049934e
+  vets-service:
+    tag: 049934e
+  visits-service:
+    tag: 049934e
