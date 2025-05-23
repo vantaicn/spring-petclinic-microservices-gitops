@@ -7,6 +7,6 @@ services:
   vets-service:
     tag: latest
   visits-service:
-    tag: ""
+    tag: "63bd92d"
   api-gateway:
     tag: latest
