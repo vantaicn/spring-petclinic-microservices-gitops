@@ -3,16 +3,16 @@ ingress:
   namespace: staging
 services:
   admin-server:
-    tag: v4.0.1
+    tag: v4.0.0
   customers-service:
-    tag: v4.0.1
+    tag: v4.0.0
   vets-service:
-    tag: v4.0.1
+    tag: v4.0.0
   visits-service:
-    tag: v4.0.1
+    tag: v4.0.0
   config-server:
-    tag: v4.0.1
+    tag: v4.0.0
   discovery-server:
-    tag: v4.0.1
+    tag: v4.0.0
   api-gateway:
-    tag: v4.0.1
+    tag: v4.0.0
