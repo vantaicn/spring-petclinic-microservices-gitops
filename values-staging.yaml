@@ -1,3 +1,18 @@
 ingress:
   host: staging.spring-petclinic
   namespace: staging
+services:
+  admin-server:
+    tag: v4.0.3
+  customers-service:
+    tag: v4.0.3
+  vets-service:
+    tag: v4.0.3
+  visits-service:
+    tag: v4.0.3
+  config-server:
+    tag: v4.0.3
+  discovery-server:
+    tag: v4.0.3
+  api-gateway:
+    tag: v4.0.3

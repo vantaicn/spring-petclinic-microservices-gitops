@@ -1,3 +1,0 @@
-ingress:
-  host: trucs.spring-petclinic
-  namespace: trucs
