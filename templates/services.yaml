@@ -6,7 +6,7 @@ metadata:
   annotations:
     prometheus.io/scrape: "true"
     prometheus.io/path: "/actuator/prometheus"
-    prometheus.io/port: {{ $config.port }}
+    prometheus.io/port: "{{ $config.port }}"
 spec:
   type: ClusterIP
   selector:
