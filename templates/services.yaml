@@ -3,6 +3,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ $config.containerName }}
+  {{- if has $config.containerName $.Values.prometheusScrapeTargets }}
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: "/actuator/prometheus"
+    prometheus.io/port: "{{ $config.port }}"
+  {{- end }}
 spec:
   type: ClusterIP
   selector:

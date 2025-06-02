@@ -55,3 +55,9 @@ ingress:
   paths:
     - path: /
       service: api-gateway
+
+prometheusScrapeTargets:
+  - api-gateway
+  - visits-service
+  - vets-service
+  - customers-service
