@@ -26,6 +26,8 @@ spec:
               value: {{ $config.containerName }}
             - name: MANAGEMENT_ZIPKIN_TRACING_ENDPOINT
               value: "http://tracing-server.monitoring.svc.cluster.local:9411/api/v2/spans"
+            - name: MANAGEMENT_METRICS_TAGS_APPLICATION
+              value: {{ $config.containerName }}
           resources:
             limits:
               memory: "512Mi"
