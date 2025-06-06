@@ -1,6 +1,8 @@
+namespace: staging
+
 ingress:
   host: staging.spring-petclinic
-  namespace: staging
+
 services:
   admin-server:
     tag: v4.0.3

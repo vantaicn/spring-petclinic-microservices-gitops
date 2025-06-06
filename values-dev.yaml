@@ -1,6 +1,8 @@
+namespace: dev
+
 ingress:
   host: dev.spring-petclinic
-  namespace: dev
+
 services:
   api-gateway:
     tag: 049934e

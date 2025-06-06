@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ $config.containerName }}
+  namespace: {{ $.Values.namespace }}
 spec:
   replicas: {{ default 1 $config.replicaCount }}
   selector:
@@ -21,15 +22,19 @@ spec:
             - containerPort: {{ $config.port }}
           env:
             - name: CONFIG_SERVER_URL
-              value: http://config-server:8888
+              value: {{ $.Values.configServerUrl }}
             - name: EUREKA_INSTANCE_HOSTNAME
               value: {{ $config.containerName }}
             - name: MANAGEMENT_ZIPKIN_TRACING_ENDPOINT
-              value: "http://tracing-server.monitoring.svc.cluster.local:9411/api/v2/spans"
+              value: {{ $.Values.zipkinTracingUrl }}
             - name: MANAGEMENT_METRICS_TAGS_APPLICATION
               value: {{ $config.containerName }}
           resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
             limits:
               memory: "512Mi"
+              cpu: "500m"
 ---
 {{- end }}

@@ -48,13 +48,17 @@ services:
     port: 9090
     replicaCount: 1
 
+namespace: default
+
 ingress:
   enabled: true
   host: spring-petclinic
-  namespace: default
   paths:
     - path: /
       service: api-gateway
+
+configServerUrl: http://config-server:8888
+zipkinTracingUrl: http://tracing-server.monitoring.svc.cluster.local:9411/api/v2/spans
 
 prometheusScrapeTargets:
   - api-gateway
