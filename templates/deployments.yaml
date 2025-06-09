@@ -27,6 +27,8 @@ spec:
               value: {{ $config.containerName }}
             - name: MANAGEMENT_ZIPKIN_TRACING_ENDPOINT
               value: {{ $.Values.zipkinTracingUrl }}
+            - name: MANAGEMENT_TRACING_SAMPLING_PROBABILITY
+              value: 1.0
             - name: MANAGEMENT_METRICS_TAGS_APPLICATION
               value: {{ $config.containerName }}
           resources:
