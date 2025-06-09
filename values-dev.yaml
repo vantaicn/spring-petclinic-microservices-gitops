@@ -1,14 +1,16 @@
 namespace: dev
-
 ingress:
   host: dev.spring-petclinic
-
 services:
   api-gateway:
-    tag: 049934e
+    tag: 2e1c593
   vets-service:
-    tag: 97ccd8a
+    tag: 2e1c593
   visits-service:
-    tag: 97ccd8a
+    tag: 2e1c593
   discovery-server:
     tag: 7a19620
+  admin-server:
+    tag: 2e1c593
+  customers-service:
+    tag: 2e1c593
