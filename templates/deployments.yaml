@@ -31,6 +31,8 @@ spec:
               value: "1.0"
             - name: MANAGEMENT_METRICS_TAGS_APPLICATION
               value: {{ $config.containerName }}
+            - name: MANAGEMENT_PROMETHEUS_METRICS_EXPORT_EXEMPLARS_ENABLED
+              value: "true"
           resources:
             requests:
               memory: "256Mi"
