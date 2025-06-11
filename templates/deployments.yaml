@@ -33,7 +33,7 @@ spec:
               value: {{ $config.containerName }}
             - name: MANAGEMENT_PROMETHEUS_METRICS_EXPORT_EXEMPLARS_ENABLED
               value: "true"
-            - name: MANAGEMENT_METRICS_DISTRIBUTION_PERCENTILES_HISTOGRAM_HTTP_SERVER_REQUESTS
+            - name: MANAGEMENT_METRICS_DISTRIBUTION_PERCENTILES-HISTOGRAM_HTTP_SERVER_REQUESTS
               value: "true"
           resources:
             requests:
