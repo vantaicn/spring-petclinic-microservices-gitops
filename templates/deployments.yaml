@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: {{ $config.containerName }}
+        app.kubernetes.io/part-of: spring-petclinic
     spec:
       containers:
         - name: {{ $config.containerName }}
