@@ -1,5 +1,6 @@
 services:
   config-server:
+    enabled: true
     containerName: config-server
     image: vantaicn/spring-petclinic-config-server
     tag: latest
@@ -7,6 +8,7 @@ services:
     replicaCount: 1
 
   discovery-server:
+    enabled: true
     containerName: discovery-server
     image: vantaicn/spring-petclinic-discovery-server
     tag: latest
@@ -14,6 +16,7 @@ services:
     replicaCount: 1
 
   customers-service:
+    enabled: true
     containerName: customers-service
     image: vantaicn/spring-petclinic-customers-service
     tag: latest
@@ -21,6 +24,7 @@ services:
     replicaCount: 1
 
   visits-service:
+    enabled: true
     containerName: visits-service
     image: vantaicn/spring-petclinic-visits-service
     tag: latest
@@ -28,6 +32,7 @@ services:
     replicaCount: 1
 
   vets-service:
+    enabled: true
     containerName: vets-service
     image: vantaicn/spring-petclinic-vets-service
     tag: latest
@@ -35,6 +40,7 @@ services:
     replicaCount: 1
 
   api-gateway:
+    enabled: true
     containerName: api-gateway
     image: vantaicn/spring-petclinic-api-gateway
     tag: latest
@@ -42,6 +48,7 @@ services:
     replicaCount: 1
 
   admin-server:
+    enabled: true
     containerName: admin-server
     image: vantaicn/spring-petclinic-admin-server
     tag: latest
