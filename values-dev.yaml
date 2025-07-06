@@ -7,7 +7,7 @@ services:
   vets-service:
     tag: 2e1c593
   visits-service:
-    tag: 2e1c593
+    tag: 25e513a
   discovery-server:
     tag: 7a19620
   admin-server:
